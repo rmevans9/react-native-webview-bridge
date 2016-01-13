@@ -141,7 +141,7 @@ public class RCTWebViewBridge extends WebView {
     }
 
     public RCTWebViewBridge(ReactContext reactContext, Activity activity) {
-        super(activity);
+        super(reactContext);
 
         eventDispatcher = reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher();
         eventWebClient = new EventWebClient();
