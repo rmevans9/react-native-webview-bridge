@@ -81,7 +81,8 @@ public class RCTWebViewBridgeManager extends SimpleViewManager<RCTWebViewBridge>
     @Override
     public Map getExportedCustomDirectEventTypeConstants() {
         return MapBuilder.of(
-                RCTMessageEvent.EVENT_NAME, MapBuilder.of("registrationName", "onBridgeMessage")
+                RCTMessageEvent.EVENT_NAME, MapBuilder.of("registrationName", "onBridgeMessage"),
+                NavigationStateChangeEvent.EVENT_NAME, MapBuilder.of("registrationName", "onNavigationStateChange")
         );
     }
 }

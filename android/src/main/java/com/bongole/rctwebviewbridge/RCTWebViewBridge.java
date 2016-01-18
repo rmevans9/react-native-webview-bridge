@@ -113,11 +113,11 @@ public class RCTWebViewBridge extends WebView {
 
         @Override
         public void onPageFinished(WebView view, String url) {
-            /*
+
             eventDispatcher.dispatchEvent(new NavigationStateChangeEvent(
-                    getId(), SystemClock.uptimeMillis(),false, view.canGoForward(),
-                    url, view.getTitle(), true));
-            */
+                    getId(), SystemClock.uptimeMillis(), false,
+                    url, true, view.canGoForward()));
+
 
             view.loadUrl("javascript:" + jsWrap(WebViewBridgeScript) );
 
